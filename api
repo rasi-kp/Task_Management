@@ -1,0 +1,250 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "648b8629-9bf1-4067-bf8e-8dd51e9d7f10",
+      "name": "Task Manage",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2024-10-12T07:48:16.000Z",
+      "createdAt": "2024-10-12T06:43:27.000Z",
+      "lastUpdatedBy": "32470869",
+      "uid": "32470869-648b8629-9bf1-4067-bf8e-8dd51e9d7f10"
+    },
+    "item": [
+      {
+        "name": "User Registration",
+        "id": "bf8f44c6-3d4a-445c-a5a7-67a71a0a9a1c",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "urlencoded",
+            "urlencoded": [
+              {
+                "key": "username",
+                "value": "rasi1",
+                "type": "text"
+              },
+              {
+                "key": "password",
+                "value": "123",
+                "type": "text"
+              }
+            ]
+          },
+          "url": {
+            "raw": "localhost:5000/register",
+            "host": [
+              "localhost"
+            ],
+            "port": "5000",
+            "path": [
+              "register"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "32470869-bf8f44c6-3d4a-445c-a5a7-67a71a0a9a1c"
+      },
+      {
+        "name": "Login",
+        "id": "39e1e145-c270-4c29-ac1a-9cd3e6cc849e",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "urlencoded",
+            "urlencoded": [
+              {
+                "key": "username",
+                "value": "rasi",
+                "type": "text"
+              },
+              {
+                "key": "password",
+                "value": "123",
+                "type": "text"
+              }
+            ]
+          },
+          "url": {
+            "raw": "localhost:5000/login",
+            "host": [
+              "localhost"
+            ],
+            "port": "5000",
+            "path": [
+              "login"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "32470869-39e1e145-c270-4c29-ac1a-9cd3e6cc849e"
+      },
+      {
+        "name": "Get all Tasks",
+        "id": "76ea7736-a119-471a-b04e-691697179663",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI4NzE3MDMxLCJleHAiOjE3Mjg3MjA2MzF9.qkqLdMZR9pSj5lyJgHqLNXJEDY8LQolg9sfYhq4yHaY",
+                "type": "string"
+              }
+            ]
+          },
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "localhost:5000/tasks",
+            "host": [
+              "localhost"
+            ],
+            "port": "5000",
+            "path": [
+              "tasks"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "32470869-76ea7736-a119-471a-b04e-691697179663"
+      },
+      {
+        "name": "Create Task",
+        "id": "1c892358-7aa1-4a1e-b0f7-f0e4058a421a",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI4NzE3MDMxLCJleHAiOjE3Mjg3MjA2MzF9.qkqLdMZR9pSj5lyJgHqLNXJEDY8LQolg9sfYhq4yHaY",
+                "type": "string"
+              }
+            ]
+          },
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "urlencoded",
+            "urlencoded": [
+              {
+                "key": "title",
+                "value": "footer",
+                "type": "text"
+              },
+              {
+                "key": "parent_id",
+                "value": "2",
+                "type": "text"
+              }
+            ]
+          },
+          "url": {
+            "raw": "localhost:5000/tasks",
+            "host": [
+              "localhost"
+            ],
+            "port": "5000",
+            "path": [
+              "tasks"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "32470869-1c892358-7aa1-4a1e-b0f7-f0e4058a421a"
+      },
+      {
+        "name": "Delete Task",
+        "id": "59d5ce30-94d8-4994-b6a1-ae7167e239ac",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI4NzE3MDMxLCJleHAiOjE3Mjg3MjA2MzF9.qkqLdMZR9pSj5lyJgHqLNXJEDY8LQolg9sfYhq4yHaY",
+                "type": "string"
+              }
+            ]
+          },
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "localhost:5000/tasks/3",
+            "host": [
+              "localhost"
+            ],
+            "port": "5000",
+            "path": [
+              "tasks",
+              "3"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "32470869-59d5ce30-94d8-4994-b6a1-ae7167e239ac"
+      },
+      {
+        "name": "Update Task",
+        "id": "1e63a2c8-d47c-464a-8f7d-8656500b9d07",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI4NzE3MDMxLCJleHAiOjE3Mjg3MjA2MzF9.qkqLdMZR9pSj5lyJgHqLNXJEDY8LQolg9sfYhq4yHaY",
+                "type": "string"
+              }
+            ]
+          },
+          "method": "PUT",
+          "header": [],
+          "body": {
+            "mode": "urlencoded",
+            "urlencoded": [
+              {
+                "key": "title",
+                "value": "Create new Page 1",
+                "type": "text"
+              }
+            ]
+          },
+          "url": {
+            "raw": "localhost:5000/tasks/4",
+            "host": [
+              "localhost"
+            ],
+            "port": "5000",
+            "path": [
+              "tasks",
+              "4"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "32470869-1e63a2c8-d47c-464a-8f7d-8656500b9d07"
+      }
+    ]
+  }
+}

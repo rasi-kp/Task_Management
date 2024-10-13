@@ -1,5 +1,10 @@
 # Task Management System with Authorization and Performance Optimization
 
+![task-management](https://github.com/user-attachments/assets/97012663-8309-4822-9b03-ea2cb830d6b4)
+<img width="960" alt="home page" src="https://github.com/user-attachments/assets/e6e073e4-ec17-4b8e-8d9b-3607769ba549">
+<img width="960" alt="sign in page" src="https://github.com/user-attachments/assets/7d0b568f-92e8-4625-b93f-477359da720e">
+<img width="960" alt="add new task" src="https://github.com/user-attachments/assets/2e66fdc3-62bf-45c5-9b51-7ff3dfd3f3fa">
+
 This Task Management System allows users to create, view, and manage their tasks efficiently. The application implements user authorization, handles nested tasks, and is optimized for performance with comprehensive error handling.
 
 ## Overview

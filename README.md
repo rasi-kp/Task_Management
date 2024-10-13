@@ -16,49 +16,26 @@ The application consists of a Node.js backend with a PostgreSQL database and a R
 ### Task Management
 - Users can create, view, update, and delete tasks.
 - Support for nested tasks (subtasks) with a clean and organized user interface.
-- Pagination to optimize performance when displaying large datasets.
+- Pagination to optimize performance.
 
-### Error Handling
-- User-friendly error messages for all API errors (e.g., network issues, server errors, validation errors).
-- Toast notifications to display success and error messages for user actions (task creation, updates, deletions).
-
-## Database Setup
-
-### PostgreSQL Database
-1. Create a PostgreSQL database named `task_manager`.
-2. Create the following tables:
-
-   #### Users Table
-   - `id`: Primary key
-   - `username`: Unique string
-   - `password_hash`: String (store hashed passwords)
-   - `created_at`: Timestamp
-
-   #### Tasks Table
-   - `id`: Primary key
-   - `title`: String
-   - `completed`: Boolean
-   - `parent_id`: Foreign key (nullable for top-level tasks)
-   - `user_id`: Foreign key (to associate tasks with users)
-   - `created_at`: Timestamp
 
 ## Node.js Backend
 
 ### Setup Express Server
 - Use Express to set up a RESTful API with the following endpoints:
 
-  - `POST /register`: Register a new user with validation for unique usernames and strong passwords.
-  - `POST /login`: Authenticate users and return a JWT. Handle errors for incorrect credentials.
-  - `GET /tasks`: Retrieve all tasks for the authenticated user with pagination.
-  - `POST /tasks`: Create a new task with optional subtasks and handle validation errors.
-  - `PUT /tasks/:id`: Update the status of a task (mark as completed) and return errors if the task does not exist.
-  - `DELETE /tasks/:id`: Delete a task and return appropriate error messages if the task does not belong to the user.
+  - `POST /register`: Register a new user .
+  - `POST /login`: Authenticate users .
+  - `GET /tasks`: Retrieve all tasks user with pagination.
+  - `POST /tasks`: Create a new task .
+  - `PUT /tasks/:id`: Update the task.
+  - `DELETE /tasks/:id`: Delete a task .
 
 ## React Frontend
 
 ### User Interface
 - **Registration Form**: Allows users to register with a username and password, displaying error messages for validation issues.
-- **Login Form**: Authenticates users and stores the JWT in local storage for subsequent requests. Displays error messages for failed login attempts.
+- **Login Form**: Authenticates users and stores the JWT in local storage .
 - **Task Management**:
   - Displays a list of tasks for the logged-in user, including subtasks in a nested format.
   - Implements a form to create new tasks and subtasks with error handling for invalid input.
@@ -74,5 +51,12 @@ The application consists of a Node.js backend with a PostgreSQL database and a R
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/task-management-system.git
-   cd task-management-system
+   git clone https://github.com/rasi-kp/Task_Management.git
+   cd Task_Management
+
+2. add .env file:
+
+   ```bash
+   PORT=5000
+   DATABASE_URL=postgresql://postgres:password@localhost:5432/task_manager
+   JWT_SECRET_USER="user"
